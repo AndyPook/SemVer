@@ -23,18 +23,6 @@ namespace SemVer.Tests
         }
 
         [Fact]
-        public void OnlyMajor()
-        {
-            var subject = new SemVer("1");
-
-            Assert.Equal(1, subject.Major);
-            Assert.Equal(0, subject.Minor);
-            Assert.Equal(0, subject.Patch);
-            Assert.Equal(string.Empty, subject.PreRelease);
-            Assert.Equal(string.Empty, subject.BuildMetadata);
-        }
-
-        [Fact]
         public void WithPreRelease()
         {
             var subject = new SemVer("1.2.3-abc");
@@ -68,6 +56,21 @@ namespace SemVer.Tests
             Assert.Equal(3, subject.Patch);
             Assert.Equal("abc", subject.PreRelease);
             Assert.Equal("xyz", subject.BuildMetadata);
+        }
+
+        [Theory]
+        [InlineData("")]
+        [InlineData("x")]
+        [InlineData("1")]
+        [InlineData("1.1")]
+        [InlineData("1..")]
+        [InlineData("1.1.x")]
+        [InlineData("1.0.0,ab")]
+        [InlineData("1.0.0-a..b")]
+        [InlineData("1.0.0-..")]
+        public void Errors(string version)
+        {
+            Assert.Throws<SemVer.ParseException>(() => new SemVer(version));
         }
 
         [Theory]
