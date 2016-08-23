@@ -1,8 +1,9 @@
 ﻿{
   "title": "SemVer",
   "copyright": "Andy Pook",
-  "description": "Strict SemVer parser for dotnet Core",
-  "version": "1.0.0-*",
+  "company": "AndyPook",
+  "description": "Strict SemVer 2.0 parser for dotnet Core",
+  "version": "1.0.1-*",
 
   "dependencies": {
     "NETStandard.Library": "1.6.0"
