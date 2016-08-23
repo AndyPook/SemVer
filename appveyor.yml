@@ -1,4 +1,4 @@
-version: "%projectVersion%"
+version: {build}
 branches:  
   only:
   - master
