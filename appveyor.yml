@@ -1,0 +1,22 @@
+version: '{build}'  
+pull_requests:  
+  do_not_increment_build_number: true
+branches:  
+  only:
+  - master
+nuget:  
+  disable_publish_on_pr: true
+build_script:  
+- ps: .\Build.ps1
+test: off  
+artifacts:  
+- path: .\artifacts\*-git-*.nupkg
+  name: NuGet
+deploy:  
+- provider: NuGet
+  server: https://www.myget.org/F/andypook/api/v2/package
+  api_key:
+    secure: iykKTfD0X828Y3pLkA5jrO7tJ4wA/mfsQOrd1dBD4AR5jvdg75DxEegCa+TMGNHZ
+  skip_symbols: true
+  on:
+    branch: master
