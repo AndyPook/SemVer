@@ -1,4 +1,4 @@
-version: %projectVersion%
+version: "%projectVersion%"
 branches:  
   only:
   - master
