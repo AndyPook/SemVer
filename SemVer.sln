@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26206.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EC282BDA-A24D-405E-B67D-F25BDD320A8F}"
 EndProject
@@ -9,12 +9,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		appveyor.yml = appveyor.yml
 		build.ps1 = build.ps1
-		global.json = global.json
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SemVer", "src\SemVer\SemVer.xproj", "{6134977B-D8E3-470F-A8DD-ADA98B7C6494}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SemVer", "src\SemVer\SemVer.csproj", "{6134977B-D8E3-470F-A8DD-ADA98B7C6494}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SemVer.Tests", "src\SemVer.Tests\SemVer.Tests.xproj", "{D32302E3-19FE-466B-922C-7A2936F6F4E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SemVer.Tests", "src\SemVer.Tests\SemVer.Tests.csproj", "{D32302E3-19FE-466B-922C-7A2936F6F4E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>Strict SemVer 2.0 parser for dotnet Core</Description>
+    <Copyright>Andy Pook</Copyright>
+    <AssemblyTitle>SemVer</AssemblyTitle>
+    <VersionPrefix>1.0.1</VersionPrefix>
+    <TargetFramework>netstandard1.3</TargetFramework>
+    <AssemblyName>SemVer</AssemblyName>
+    <PackageId>SemVer</PackageId>
+  </PropertyGroup>
+  
+</Project>
